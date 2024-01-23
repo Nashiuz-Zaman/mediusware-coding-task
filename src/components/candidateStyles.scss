@@ -1,0 +1,67 @@
+// variables
+$modalAColor: #46139f;
+$modalBColor: #ff7f50;
+
+// classes
+.modal-container {
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  backdrop-filter: blur(4px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  // display: none;
+
+  &__modal {
+    max-width: 40rem;
+    width: 100%;
+    min-height: 10rem;
+    background-color: #fff;
+    border: 1px solid #111;
+    border-radius: 5px;
+    padding: 1rem;
+
+    ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    &__btns {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      width: max-content;
+      margin-inline: auto;
+      margin-bottom: 2rem;
+
+      &_btn {
+        appearance: none;
+        border: none;
+        cursor: pointer;
+        display: inline-block;
+        font-family: inherit;
+        border-radius: 5px;
+        padding: 5px 10px;
+        color: #fff;
+      }
+
+      .modal-a-btn {
+        background-color: $modalAColor;
+      }
+
+      .modal-b-btn {
+        background-color: $modalBColor;
+      }
+
+      .close-btn {
+        background-color: #fff;
+        border: 1px solid $modalAColor;
+        color: #000;
+      }
+    }
+  }
+}
